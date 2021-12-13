@@ -361,3 +361,152 @@ body {
           box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 /*# sourceMappingURL=main.css.map */
+
+/* main content */
+main {
+  width: 100%;
+}
+
+/* tranding */
+.trending{
+  height: 60px;
+  width: 369px;
+  background-color: #0D47A1;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.header-container{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 60px;
+}
+.content-trending{
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  border: 1px solid red;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.list-item {
+  height: 311px;
+  width: 329px;
+  background-color: #ffffff;
+  margin: 30px 45px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2);
+}
+.thumbnail{
+  height: 200px;
+  width: 100%;
+  background-color: grey;
+}
+.text{
+  margin-top: 10px;
+  width: 100%;
+  background-color: white;
+}
+.heading-book h3{
+  font-size: 20px;
+  color: brown;
+  text-align: center;
+}
+.description {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.add-databuku button{
+  border: none;
+  background-color: #0D47A1;
+  width: 80px;
+  height: 38px;
+  background-color: #2BA0B0;
+  color: white;
+  font-weight: bold;
+}
+button:hover{
+  cursor: pointer;
+  background-color: #01565b;
+}
+/* best seller */
+.best-seller{
+  height: 60px;
+  width: 369px;
+  background-color: #0D47A1;
+  border-bottom-right-radius: 50px;
+  border-top-right-radius: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.content-seller{
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 60px;
+}
+.content-best-seller{
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  height: 410px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+}
+
+/* category */
+.list-category {
+  background-color: rgba(255, 255, 255, 0.82);
+  box-sizing: border-box;
+  padding: 10px;
+  width: 100%;
+  height: 410px;
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  overflow: hidden;
+}
+.category-btn{
+  display: flex;
+  flex-direction: row;
+}
+.btn{
+  height: 63px;
+  width: 245px;
+  background-color: #0D47A1;
+  border: 1px solid white;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+  line-height: 63px;
+}
+.btn:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/* about */
+aside {
+  height: 204px;
+  width: 100%;
+}
+/* batas main */
+
+/* footer */
+footer{
+  height: 100px;
+  width: 100%;
+  background-color: #00AFB9;
+}
+footer p {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+/* batas footer*/
