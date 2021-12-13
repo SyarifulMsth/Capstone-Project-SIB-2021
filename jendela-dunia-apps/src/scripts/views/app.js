@@ -18,6 +18,7 @@ class App {
 
     // kita bisa menginisiasikan komponen lain bila ada
   }
+
 }
 
 export default App;
