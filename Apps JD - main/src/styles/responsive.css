@@ -1,0 +1,280 @@
+@media screen and (min-width: 320px) and (max-device-width: 700px) {
+  .app-bar {
+    padding: 14px 32px;
+  }
+  .app-bar .app-bar__brand {
+    text-align: center;
+    padding-left: 0%;
+  }
+  .app-bar .app-bar__brand h1 {
+    margin: auto;
+    text-align: center;
+    font-size: 2em;
+  }
+  .app-bar .app-bar__navigation {
+    background-color: #00AFB9;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+            box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  }
+  .app-bar .app-bar__navigation ul li a {
+    width: 90%;
+    background-color: #00AFB9;
+    -webkit-box-shadow: rgba(255, 255, 255, 0.336) 0px 4px 8px -2px, rgba(255, 255, 255, 0.801) 0px 0px 0px 1px;
+            box-shadow: rgba(255, 255, 255, 0.336) 0px 4px 8px -2px, rgba(255, 255, 255, 0.801) 0px 0px 0px 1px;
+    color: white;
+  }
+  .hero-container {
+    padding: 5%;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 200px 400px;
+        grid-template-rows: 200px 400px;
+  }
+  .hero-container .hero-element {
+    padding: 16px;
+    margin: auto;
+  }
+  .hero-container .hero-element .hero-image {
+    -webkit-transition: all 2s;
+    transition: all 2s;
+    padding: 10px;
+    top: 45px;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    position: relative;
+  }
+  .hero-container .hero-element .hero-title {
+    font-size: 36px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+  .hero-container .hero-element .hero-tagline {
+    padding: 8px;
+    text-align: justify;
+    text-align: center;
+    font-family: 'Sanchez', serif;
+    font-size: 17px;
+  }
+  .hero-container .hero-element .btn-hero {
+    margin-top: 5px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding: 0px 0px;
+    text-align: center;
+    font-size: 14px;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+  }
+  .hero-container .hero-element .btn-hero .wishlist,
+  .hero-container .hero-element .btn-hero .cari-buku {
+    -webkit-transition: all 2s;
+    transition: all 2s;
+    margin: 15px;
+    padding: 15px;
+  }
+  .hero-container .hero-element .btn-hero .wishlist:hover,
+  .hero-container .hero-element .btn-hero .cari-buku:hover {
+    padding: 16px;
+  }
+  .search-books {
+    border-radius: 20px;
+    -webkit-box-shadow: -2px 2px 2px 1px rgba(17, 16, 16, 0.6);
+            box-shadow: -2px 2px 2px 1px rgba(17, 16, 16, 0.6);
+    top: -90px;
+    position: relative;
+    text-align: center;
+    width: 85%;
+    height: 1050px;
+  }
+  .search-books h3 {
+    padding: 15px;
+    font-size: 28px;
+  }
+  .container-search__results {
+    display: -ms-grid;
+    display: grid;
+    padding: 8px;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    margin: auto;
+    padding: 8px;
+    -webkit-column-gap: 10px;
+            column-gap: 10px;
+  }
+  .container-search__results .search-items {
+    border: 4px solid gray;
+    background-color: #ef233c;
+  }
+  .container-search__results .search-items .image-item {
+    height: 150px;
+    background-color: gray;
+  }
+  .container-search__results .search-items .detail-item {
+    height: 100px;
+    background-color: white;
+    padding-bottom: 10%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .container-search__results .search-items .detail-item .title-book {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    /* box1 akan dimulai dari kolom garis pertama */
+    grid-column-end: 4;
+    /* dan berakhir di kolom garis ketiga */
+  }
+  .container-search__results .search-items .detail-item .title-book h4 {
+    cursor: pointer;
+    margin: auto;
+    padding: 16px;
+    color: #F8555E;
+  }
+  .container-search__results .search-items .detail-item .details-book {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    /* box1 akan dimulai dari kolom garis pertama */
+    grid-column-end: 3;
+    /* dan berakhir di kolom garis ketiga */
+  }
+  .container-search__results .search-items .detail-item .details-book p {
+    padding-left: 10px;
+    font-size: 14px;
+    text-align: left;
+  }
+  .container-search__results .search-items .detail-item .details-book p .author-book {
+    text-indent: 20%;
+  }
+  .container-search__results .search-items .detail-item .details-book p .genre-book {
+    text-indent: 20%;
+  }
+  .container-search__results .search-items .detail-item .details-book p .rating-book {
+    text-indent: 10%;
+  }
+  .container-search__results .search-items .detail-item .add-button__book {
+    -ms-grid-column: 2;
+        grid-column-start: 2;
+    grid-column-start: 3;
+  }
+  .container-search__results .search-items .detail-item .add-button__book p {
+    cursor: pointer;
+    color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #2BA0B0;
+  }
+  footer {
+    height: 80px;
+    width: 100%;
+    background-color: #00AFB9;
+  }
+  footer p {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-device-width: 1022px) {
+  .hero-container {
+    -ms-grid-rows: 400px;
+        grid-template-rows: 400px;
+  }
+  .hero-container .hero-element {
+    padding: 0px;
+    margin-top: 0px;
+  }
+  .hero-container .hero-element .hero-image {
+    padding: 10px;
+    top: 45px;
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    position: relative;
+    -webkit-transition: all 2s;
+    transition: all 2s;
+  }
+  .hero-container .hero-element .hero-title {
+    font-size: 36px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+  .hero-container .hero-element .hero-tagline {
+    padding: 8px;
+    text-align: justify;
+    text-align: center;
+    font-family: 'Sanchez', serif;
+    font-size: 17px;
+  }
+  .hero-container .hero-element .btn-hero {
+    margin-top: 5px;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    padding: 0px 0px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .hero-container .hero-element .btn-hero .wishlist,
+  .hero-container .hero-element .btn-hero .cari-buku {
+    margin: 15px;
+    padding: 15px;
+  }
+  .hero-container .hero-element .btn-hero .wishlist:hover,
+  .hero-container .hero-element .btn-hero .cari-buku:hover {
+    padding: 16px;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-device-width: 700px) {
+  .hero-container .hero-element .hero-image {
+    -webkit-transition: all 2s;
+    transition: all 2s;
+    padding: 10px;
+    top: 25px;
+    width: 250px;
+    height: 250px;
+  }
+  .search-books {
+    top: -100px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .app-bar {
+    -ms-grid-columns: 1fr auto;
+        grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+    text-align: center;
+  }
+  .app-bar .app-bar__brand {
+    text-align: center;
+  }
+  .app-bar .app-bar__brand h1 {
+    font-size: 2em;
+  }
+  .app-bar .app-bar__menu {
+    display: none;
+  }
+  .app-bar .app-bar__navigation {
+    position: static;
+    width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    border-radius: none;
+  }
+  .app-bar .app-bar__navigation ul li {
+    display: inline-block;
+  }
+  .app-bar .app-bar__navigation ul li a {
+    display: inline-block;
+    width: 120px;
+    text-align: center;
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */
