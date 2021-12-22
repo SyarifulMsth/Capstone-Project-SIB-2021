@@ -1,0 +1,519 @@
+/* Font */
+/* Font */
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&family=Ewert&family=Fredericka+the+Great&family=Monoton&family=Montserrat:wght@500;600;700&family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vesper+Libre:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@100;200;700&family=Big+Shoulders+Stencil+Text:wght@200;300;400;500&family=Black+Ops+One&family=Bungee+Shade&family=Cabin&family=Cinzel+Decorative:wght@900&family=Cutive&family=Ewert&family=Forum&family=Fredericka+the+Great&family=Monoton&family=Noto+Sans+Cuneiform&family=Noto+Sans+Javanese&family=Pacifico&family=Quattrocento+Sans&family=Rokkitt:wght@100&family=Sanchez&family=VT323&family=Vesper+Libre&family=Yatra+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hind:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@100;200;700&family=Big+Shoulders+Stencil+Text:wght@200;300;400;500&family=Black+Ops+One&family=Bungee+Shade&family=Cabin&family=Cinzel+Decorative:wght@900&family=Cutive&family=Ewert&family=Forum&family=Fredericka+the+Great&family=Monoton&family=Noto+Sans+Cuneiform&family=Noto+Sans+Javanese&family=Pacifico&family=Quattrocento+Sans&family=Rock+3D&family=Rokkitt:wght@100&family=Rubik:wght@300&family=Sanchez&family=VT323&family=Vesper+Libre&family=Yatra+One&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+
+}
+
+body {
+
+  background-color: white;
+  // min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// app bar 
+// app bar 
+.app-bar {
+  font-family: 'Montserrat', sans-serif;
+  padding: 8px 16px;
+  background-color: #00AFB9;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+  .app-bar__menu {
+    display: flex;
+    align-items: center;
+
+    button {
+      background-color: transparent;
+      color: white;
+      border: none;
+      font-size: 18px;
+      padding: 8px;
+      cursor: pointer;
+      // style tambahan
+      border-radius: 10px;
+      box-shadow: rgba(255, 255, 255, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+
+      &:hover {
+        transition: 2s;
+        box-shadow: none;
+      }
+    }
+  }
+
+  .app-bar__brand {
+    display: flex;
+    align-items: center;
+    // style tambahan    
+    padding-left: 5%;
+
+    h1 {
+      font-family: 'Vesper Libre', serif;
+      // font-weight: 400;
+      color: white;
+      text-transform: uppercase;
+      font-size: 22px;
+      user-select: none;
+    }
+  }
+
+  // memunculkan navigation versi mobile
+  .app-bar__navigation.open {
+    transition: ease-in-out 1s;
+    top: 80px;
+    left: 0;
+  }
+
+  .app-bar__navigation {
+    position: absolute;
+    top: 50px;
+    left: -180px;
+    width: 150px;
+    padding: 8px;
+    overflow: hidden;
+    // style tambahan 
+    transition: ease-in-out 0.5s;
+
+    ul {
+      li {
+        a {
+          display: inline-block;
+          text-decoration: none;
+          color: white;
+          padding: 8px;
+          margin-bottom: 5px;
+          width: 100%;
+          // style tambahan 
+          transition: all 0.3s;
+          font-size: 16px;
+
+          &:hover {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/* 
+*  Skip Link
+*  Skip Link
+*  Skip Link
+*/
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+
+  &:focus {
+    top: 0;
+    margin: 15px 15px;
+  }
+}
+
+
+/* Hero */
+/* Hero */
+/* Hero */
+
+.hero-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 500px;
+  padding: 8px;
+  background-color: #00AFB9;
+  column-gap: 5px;
+  color: white;
+  overflow: hidden;
+  // box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+
+
+  .hero-element {
+    padding: 16px;
+    margin: auto;
+
+    .hero-image {
+      top: 10px;
+      width: 400px;
+      height: 400px;
+      background: url("../public/hero/image.png");
+      background-size: cover;
+      position: relative;
+      bottom: 40px;
+    }
+
+    .hero-title {
+      font-family: 'Fredericka the Great', cursive;
+      font-weight: 200;
+      font-size: 45px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .hero-tagline {
+
+      text-align: center;
+      font-weight: 400;
+      font-family: 'Rokkitt', serif;
+      font-size: 20px;
+    }
+
+    .btn-hero {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0 140px;
+      text-align: center;
+      color: black;
+
+      .wishlist {
+        margin: 10px;
+        padding: 10px;
+        cursor: pointer;
+        background-color: white;
+        color: black;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 4px 6px;
+
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+          transition: 0.25s;
+          background-color: #F8555E;
+          color: white;
+        }
+      }
+
+      .cari-buku {
+        margin: 10px;
+        padding: 10px;
+        cursor: pointer;
+        background-color: #F8555E;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+          transition: 0.5s;
+          background-color: #F8555E;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+
+/* Search Books */
+/* Search Books */
+/* Search Books */
+
+.search-books {
+  background-color: #2EC4B6;
+  border-radius: 20px;
+  box-shadow: -2px 2px 2px 1px rgba(17, 16, 16, 0.6);
+
+  top: -60px; // agar container naik
+  position: relative;
+  text-align: center;
+
+  width: 70%;
+  margin: auto;
+  height: 160px;
+
+  h3 {
+    padding: 20px;
+    font-size: 40px;
+    color: #e0e0de;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+    // Style 1
+    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+
+    // Style 2
+    // font-family: 'Fredericka the Great', cursive;
+    // font-weight: 200;
+
+    // Style 3
+    // font-weight: 600;
+    // font-family: 'Big Shoulders Inline Text', cursive;
+
+    // Style 4
+    // font-family: 'Monoton', cursive;
+    // font-weight: 200;
+
+    // Style 5
+    // font-weight: 200;
+    // font-family: 'Ewert', cursive;
+  }
+
+
+  .input-search {
+    width: 40%;
+    margin: auto;
+    padding: 12px;
+    border-radius: 16px;
+    border: rgba(0, 0, 0, 0.05);
+    background-color: #edf2f4;
+  }
+
+  ::placeholder {
+    // ini placeholder untuk tulisan "Find Book"
+    color: black;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .btn-search {
+    cursor: pointer;
+    padding: 12px 20px;
+    border-radius: 16px;
+    border: rgba(0, 0, 0, 0.05);
+    background-color: #ef233c;
+    color: rgb(241, 226, 226);
+
+    &:hover {
+      transition: 0.25s;
+      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+
+      color: #ffffff;
+    }
+  }
+}
+
+/* Search Results */
+/* Search Results */
+/* Search Results */
+
+
+/* main content */
+
+// Style Baru
+
+#mainContent {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em 1em;
+  border-radius: 20px;
+  margin: 0% 4%;
+
+  .container-search__results {
+    background-color: white;
+    padding: 14px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    list-style: none;
+
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-gap: 0em 1em;
+
+    &:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      transition: all 0.8s ease, background-position 1ms;
+    }
+
+    .image-book {
+      img {
+        margin: auto;
+        width: 100px;
+        height: 170px;
+        object-fit: cover;
+        // border: 0.5px solid black;
+        border-radius: 4px;
+      }
+    }
+
+    .items-book {
+      padding-top: 18px;
+
+      p {
+
+        .p-authors {
+          // font-weight: bold;
+          color: #29bf12;
+        }
+
+        .p-publisher,
+        .p-pageCount {
+          color: crimson;
+        }
+
+        width: 200px;
+
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+
+      h2 {
+        font-family: 'Vesper Libre', serif;
+        font-weight: 500;
+        text-transform: capitalize;
+        font-size: 22px;
+
+        height: 40px;
+        width: 200px;
+
+        position: relative;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+
+
+        a {
+          color: black;
+          text-decoration: none;
+        }
+      }
+
+
+      .btn-wishlist {
+        align-self: center;
+        background-color: #fff;
+        background-image: none;
+        background-position: 0 90%;
+        background-repeat: repeat no-repeat;
+        background-size: 4px 3px;
+        border-radius: 15px 225px 255px 15px 15px 255px 225px 15px;
+        border-style: solid;
+        border-width: 2px;
+        box-shadow: rgba(0, 0, 0, .2) 15px 28px 25px -18px;
+        box-sizing: border-box;
+        color: #41403e;
+        cursor: pointer;
+        display: inline-block;
+        font-family: Neucha, sans-serif;
+        font-size: 1rem;
+        line-height: 23px;
+        outline: none;
+        padding: .75rem;
+        text-decoration: none;
+        transition: all 235ms ease-in-out;
+        border-bottom-left-radius: 15px 255px;
+        border-bottom-right-radius: 225px 15px;
+        border-top-left-radius: 255px 15px;
+        border-top-right-radius: 15px 225px;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        position: relative;
+        left: 120px;
+        top: 10px;
+        border-color: #3DD1E7;
+
+        &:hover {
+          box-shadow: rgba(0, 0, 0, .3) 2px 8px 8px -5px;
+          transform: translate3d(0, 2px, 0);
+        }
+
+        &:focus {
+          box-shadow: rgba(0, 0, 0, .3) 2px 8px 4px -6px;
+        }
+      }
+
+      // style lainnya
+      // .btn-wishlist {
+      //   background-color: #3DD1E7;
+      //   border: 0 solid #E5E7EB;
+      //   box-sizing: border-box;
+      //   color: #000000;
+      //   display: flex;
+      //   font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      //   font-size: 1rem;
+      //   font-weight: 700;
+      //   justify-content: center;
+      //   line-height: 1.75rem;
+      //   padding: .75rem 1.65rem;
+      //   position: relative;
+      //   text-align: center;
+      //   text-decoration: none #000000 solid;
+      //   text-decoration-thickness: auto;
+      //   width: 100%;
+      //   max-width: 200px;
+      //   position: relative;
+      //   cursor: pointer;
+      //   transform: rotate(-2deg);
+      //   user-select: none;
+      //   -webkit-user-select: none;
+      //   touch-action: manipulation;
+      //   margin-top: 10px;
+
+      //   &:focus {
+      //     outline: 0;
+      //   }
+
+      //   &:after {
+      //     content: '';
+      //     position: absolute;
+      //     border: 1px solid #000000;
+      //     bottom: 4px;
+      //     left: 4px;
+      //     width: calc(100% - 1px);
+      //     height: calc(100% - 1px);
+      //   }
+
+      //   &:hover:after {
+      //     bottom: 2px;
+      //     left: 2px;
+      //   }
+      // }
+    }
+
+  }
+}
+
+
+
+// Batas Style Baru
+
+
+
+/* about */
+aside {
+  height: 204px;
+  width: 100%;
+}
+
+/* batas main */
+
+/* footer */
+footer {
+  height: 80px;
+  width: 100%;
+  background-color: #00AFB9;
+
+  p {
+    font-family: 'Sanchez', serif;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    line-height: 80px;
+  }
+}
+
+/* batas footer*/
