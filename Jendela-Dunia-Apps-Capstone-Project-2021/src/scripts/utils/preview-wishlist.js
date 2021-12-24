@@ -1,12 +1,15 @@
 class PreviewWishlist {
   static preview(books) {
-    const { title, publisher } = books;
-    const btnpreview = document.getElementById('btn-preview');
-
-    btnpreview.addEventListener('click', (event) => {
-      event.preventDefault();
-
-      alert(`${title} ${publisher} `);
+    // eslint-disable-next-line no-unused-vars
+    const { id, title, publisher } = books;
+    const btnPreview = document.querySelectorAll('.preview-btn');
+    btnPreview.forEach((preview) => {
+      preview.addEventListener('click', (event) => {
+        // eslint-disable-next-line max-len
+        alert(event.target.previousElementSibling.previousElementSibling.innerHTML);
+        const a = event.target.previousElementSibling.previousElementSibling.previousElementSibling;
+        console.log(a.innerHTML);
+      });
     });
   }
 }

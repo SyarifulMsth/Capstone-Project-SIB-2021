@@ -1,12 +1,17 @@
 import database from '../data/database';
 
 class deleteWishlist {
+  // eslint-disable-next-line no-unused-vars
   static deleteBooks(books) {
-    const btnpreview = document.getElementById('btn-delete');
-    btnpreview.addEventListener('click', (event) => {
-      event.preventDefault();
-      database.WishListDatabase.deleteBooks(books.id);
-      this._cekDataBase(books.id);
+    const btnDelete = document.querySelectorAll('.delete-btn');
+    btnDelete.forEach((button) => {
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        // eslint-disable-next-line max-len
+        database.WishListDatabase.deleteBooks(event.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML);
+        // eslint-disable-next-line max-len
+        this._cekDataBase(event.target.previousElementSibling.previousElementSibling.previousElementSibling.previousElementSibling.innerHTML);
+      });
     });
   }
 
