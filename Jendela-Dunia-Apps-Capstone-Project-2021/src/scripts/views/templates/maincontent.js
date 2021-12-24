@@ -7,17 +7,25 @@ class Maincontent {
   // eslint-disable-next-line class-methods-use-this
   static _templateHtml(book, volumeInfo) {
     const {
-      title, authors, publisher, imageLinks,
+      title, authors, publisher, imageLinks, pageCount,
     } = volumeInfo;
     document.querySelector('#mainContent').innerHTML += `
-      <li>
-      <h2><a href="#">${book.id}</a></h2>
-        <h2><a href="${`/#/detail/${book.id}`}">${title}</a></h2>
+    <div class="container-search__results">
+
+      <div class='image-book'>
         <img src="${imageLinks.smallThumbnail}"/>
-        <p>Authors: ${authors}</p>
-        <p>Publisher: ${publisher}</p>
-      </li>
-    `;
+      </div>
+
+      <div class='items-book'>
+        <h2><a href="${`/#/detail/${book.id}`}">${title}</a></h2>
+        <p><span class='p-authors'>${authors}</span></p>
+        <br>
+        <p>Penerbit : <span class='p-publisher'>${publisher} </span></p>
+        <p>Jumlah halaman : <span class='p-pageCount'>${pageCount}</span></p>
+      </div>
+      
+      </div>
+        `;
   }
 }
 
