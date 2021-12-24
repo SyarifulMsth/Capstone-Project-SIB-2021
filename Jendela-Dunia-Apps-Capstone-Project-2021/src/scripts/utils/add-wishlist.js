@@ -26,7 +26,7 @@ const addWishlist = {
     const btnWishlist = document.getElementById('btn-wishlist');
     btnWishlist.addEventListener('click', async () => {
       await database.WishListDatabase.putBooks(this._books);
-      alert(`data tersimpan : ${this._books.title}`);
+      alert(`data tersimpan diwishlist: ${this._books.title}`);
       this._renderContainerBtn();
     });
   },
