@@ -1,6 +1,7 @@
 import database from '../../data/database';
 import AddWishlist from '../templates/add-wishlist';
 import previewWishlist from '../../utils/preview-wishlist';
+import deleteWishlist from '../../utils/delete-wishlist';
 
 const Wishlist = {
   async render() {
@@ -8,9 +9,7 @@ const Wishlist = {
       <h2>Wishlist Page</h2>
       <div class="wishlist">
        <div class="container-wishlist">
-            <div id="items-wishlist">
-            </div>
-            </div>
+            <div id="items-wishlist"></div>
         </div> 
       </div>
     `;
@@ -21,6 +20,7 @@ const Wishlist = {
     books.forEach((book) => {
       AddWishlist.templateWishlist(book);
       previewWishlist.preview(book);
+      deleteWishlist.deleteBooks(book);
     });
   },
 };

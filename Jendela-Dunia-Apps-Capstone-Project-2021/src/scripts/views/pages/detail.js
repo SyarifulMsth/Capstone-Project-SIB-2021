@@ -1,6 +1,7 @@
 import UrlParser from '../../routes/url-parser';
 import detailBooks from '../../utils/detailBooks';
 import addWishlist from '../../utils/add-wishlist';
+import addProggres from '../../utils/add-proggres';
 
 const Detail = {
   async render() {
@@ -15,6 +16,7 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const books = await detailBooks(url.id);
     this._addToWishlist(books);
+    this._addToProggres(books);
   },
 
   _addToWishlist(books) {
@@ -24,7 +26,21 @@ const Detail = {
         id: books.id,
         title: volumeInfo.title,
         publisher: volumeInfo.publisher,
+        pageCount: volumeInfo.pageCount,
+      },
+    });
+  },
+
+  _addToProggres(books) {
+    const { volumeInfo } = books;
+    addProggres.init({
+      books: {
+        id: books.id,
+        title: volumeInfo.title,
+        publisher: volumeInfo.publisher,
         description: volumeInfo.description,
+        pageCount: volumeInfo.pageCount,
+        printedPageCount: volumeInfo.printedPageCount,
       },
     });
   },
