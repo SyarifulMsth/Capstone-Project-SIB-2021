@@ -1,5 +1,6 @@
 import database from '../../data/database';
 import AddWishlist from '../templates/add-wishlist';
+import previewWishlist from '../../utils/preview-wishlist';
 
 const Wishlist = {
   async render() {
@@ -19,6 +20,7 @@ const Wishlist = {
     const books = await database.WishListDatabase.getALlBooks();
     books.forEach((book) => {
       AddWishlist.templateWishlist(book);
+      previewWishlist.preview(book);
     });
   },
 };

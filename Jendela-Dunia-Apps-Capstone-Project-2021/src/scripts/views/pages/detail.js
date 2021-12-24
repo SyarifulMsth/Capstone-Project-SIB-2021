@@ -24,6 +24,7 @@ const Detail = {
         id: books.id,
         title: volumeInfo.title,
         publisher: volumeInfo.publisher,
+        description: volumeInfo.description,
       },
     });
   },
