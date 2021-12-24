@@ -13,7 +13,6 @@ const Detail = {
   // eslint-disable-next-line no-empty-function
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    // eslint-disable-next-line no-unused-vars
     const books = await detailBooks(url.id);
     this._addToWishlist(books);
   },
