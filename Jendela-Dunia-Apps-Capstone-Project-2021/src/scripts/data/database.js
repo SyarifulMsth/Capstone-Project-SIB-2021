@@ -10,6 +10,9 @@ const dbPromise = openDB(DATABASE_NAME, DATABASE_VERSION, {
 });
 
 const WishListDatabase = {
+  async addBooks(id) {
+    return (await dbPromise).add(OBJECT_STORE_NAME, id);
+  },
   async getBooks(id) {
     return (await dbPromise).get(OBJECT_STORE_NAME, id);
   },
