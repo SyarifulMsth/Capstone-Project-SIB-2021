@@ -12,10 +12,8 @@ const addWishlist = {
 
     if (await this._isBooksExist(id)) {
       this._notifikasiNotWishlist();
-      console.log('data terkirim');
     } else {
       this._notifkasiWishList();
-      console.log('data tidak terkirim');
     }
   },
 
@@ -27,14 +25,16 @@ const addWishlist = {
   _notifkasiWishList() {
     const btnWishlist = document.getElementById('btn-wishlist');
     btnWishlist.addEventListener('click', async () => {
-      console.log(this._books);
+      await database.WishListDatabase.putBooks(this._books);
+      alert(`data tersimpan : ${this._books.title}`);
+      this._renderContainerBtn();
     });
   },
 
   _notifikasiNotWishlist() {
     const btnWishlist = document.getElementById('btn-wishlist');
     btnWishlist.addEventListener('click', async () => {
-      console.log('click bukud');
+      alert(`data sudah ada : ${this._books.title}"`);
     });
   },
 };
