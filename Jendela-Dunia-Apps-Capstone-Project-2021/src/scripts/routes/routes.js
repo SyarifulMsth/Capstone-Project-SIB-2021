@@ -1,6 +1,6 @@
 import Home from '../views/pages/home';
 import Wishlist from '../views/pages/wishlist';
-import Category from '../views/pages/category';
+import Progress from '../views/pages/proggres';
 import About from '../views/pages/about';
 import Detail from '../views/pages/detail';
 
@@ -8,8 +8,8 @@ const routes = {
   '/': Home, // default page
   '/home': Home, // default page
   '/wishlist': Wishlist,
-  '/category': Category,
-  '/about': About,
+  '/progress': Progress,
+  '/about-us': About,
   '/detail/:id': Detail,
 };
 
