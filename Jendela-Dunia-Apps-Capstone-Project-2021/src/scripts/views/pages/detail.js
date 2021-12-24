@@ -6,7 +6,7 @@ import addProggres from '../../utils/add-proggres';
 const Detail = {
   async render() {
     return `
-      <h2>Detail Page</h2>
+      <h2 class='detail-page'>Detail Buku</h2>
       <div id="detail"></div>
     `;
   },

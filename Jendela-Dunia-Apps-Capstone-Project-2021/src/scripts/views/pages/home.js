@@ -3,7 +3,7 @@ import searchElement from '../../utils/searchData';
 const Home = {
   async render() {
     return `
-      <h2>Home Page</h2>
+    <h2 class='welcome-home__page'>Hai! Selamat datang di Jendela Dunia Apps 📖</h2>
     `;
   },
 

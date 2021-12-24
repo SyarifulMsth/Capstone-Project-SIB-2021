@@ -6,8 +6,8 @@ import deleteWishlist from '../../utils/delete-wishlist';
 const Wishlist = {
   async render() {
     return `
-      <h2>Wishlist Page</h2>
-      <div class="wishlist">
+    <h2 class='wishlist-page'>Wishlist Buku</h2>
+      <div div class="wishlist">
        <div class="container-wishlist">
             <div id="items-wishlist"></div>
         </div> 

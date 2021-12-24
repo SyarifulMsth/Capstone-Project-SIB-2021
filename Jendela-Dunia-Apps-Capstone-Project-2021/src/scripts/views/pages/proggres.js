@@ -4,6 +4,7 @@ import proggresTamplte from '../templates/proggres-tamplte';
 const Proggres = {
   async render() {
     return `
+    <h2 class='progress-page'>Progress membaca</h2>
     <div id="proggress-items">
      
     </div>
