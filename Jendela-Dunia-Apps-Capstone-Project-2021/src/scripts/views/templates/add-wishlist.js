@@ -10,8 +10,6 @@ class AddWishlist {
         <button id="btn-delete">delete</button>
       </li>
     `;
-    console.log(title);
-    console.log(publisher);
   }
 }
 

@@ -7,7 +7,7 @@ class maindetail {
   // eslint-disable-next-line class-methods-use-this
   static _templateHtml(volumeInfo) {
     const {
-      title, authors, publisher, imageLinks, publishedDate, pageCount, language,
+      title, authors, publisher, imageLinks, publishedDate, pageCount, language,description
     } = volumeInfo;
     const containerDetail = document.querySelector('#detail');
     containerDetail.innerHTML = '';
@@ -20,6 +20,7 @@ class maindetail {
         <p>publishedDate: ${publishedDate}</p>
         <p id="page">page : ${pageCount}</p>
         <p>language: ${language}</p>
+        <p>description: ${description}</p>
       </li>
        <button id="btn-wishlist">add to wishlist</button>
     `;
