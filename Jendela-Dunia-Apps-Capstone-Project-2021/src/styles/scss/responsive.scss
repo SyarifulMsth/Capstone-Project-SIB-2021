@@ -1,0 +1,1130 @@
+// Responsive app bar; content ; dan footer
+@media screen and (min-width: 320px) and (max-device-width: 700px) {
+
+  // App bar navigation
+  .app-bar {
+    padding: 14px 32px;
+
+    .app-bar__brand {
+      text-align: center;
+      padding-left: 0%;
+
+      h1 {
+        margin: auto;
+
+        text-align: center;
+        font-size: 2em;
+      }
+    }
+
+    .app-bar__navigation {
+      background-color: #00AFB9;
+      box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+      // border-radius: 2px 2px 25px 2px;
+
+      ul li a {
+        width: 90%;
+        background-color: #00AFB9;
+        box-shadow: rgba(255, 255, 255, 0.336) 0px 4px 8px -2px, rgba(255, 255, 255, 0.801) 0px 0px 0px 1px;
+        color: white;
+      }
+    }
+  }
+
+  // Hero 
+  .hero-container {
+    padding: 5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 200px 400px;
+
+    .hero-element {
+      padding: 16px;
+      margin: auto;
+
+      .hero-image {
+        transition: all 2s;
+
+        padding: 10px;
+        top: 45px;
+        width: 200px;
+        height: 200px;
+        background-size: cover;
+        position: relative;
+      }
+
+      .hero-title {
+        font-size: 36px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+      }
+
+      .hero-tagline {
+        padding: 8px;
+        text-align: justify;
+        text-align: center;
+        font-family: 'Sanchez', serif;
+        font-size: 17px;
+      }
+
+    }
+  }
+
+  // Search 
+  .search-books {
+    border-radius: 20px;
+    // bayangan container search 1
+    box-shadow: -2px 2px 2px 1px rgba(17, 16, 16, 0.6);
+
+    top: -90px; // agar container naik
+    position: relative;
+    text-align: center;
+
+    width: 85%;
+    height: 140px;
+
+    ::placeholder {
+      font-size: 12px;
+      white-space: nowrap;
+    }
+
+    h3 {
+      padding: 15px;
+      font-size: 28px;
+    }
+  }
+
+  .container-search__results {
+    display: grid;
+    padding: 8px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    margin: auto;
+    padding: 8px;
+    column-gap: 10px;
+
+    .search-items {
+      border: 4px solid gray;
+      background-color: #ef233c;
+
+      .image-item {
+        height: 150px;
+        background-color: gray;
+      }
+
+      .detail-item {
+        height: 100px;
+        background-color: white;
+        padding-bottom: 10%;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        .title-book {
+          grid-column-start: 1;
+          /* box1 akan dimulai dari kolom garis pertama */
+          grid-column-end: 4;
+          /* dan berakhir di kolom garis ketiga */
+
+          h4 {
+            cursor: pointer;
+            margin: auto;
+            padding: 16px;
+            color: #F8555E;
+          }
+
+        }
+
+        .details-book {
+          grid-column-start: 1;
+          /* box1 akan dimulai dari kolom garis pertama */
+          grid-column-end: 3;
+          /* dan berakhir di kolom garis ketiga */
+
+          p {
+            padding-left: 10px;
+            font-size: 14px;
+            text-align: left;
+
+            .author-book {
+              text-indent: 20%;
+            }
+
+            .genre-book {
+              text-indent: 20%;
+            }
+
+            .rating-book {
+              text-indent: 10%;
+            }
+          }
+        }
+
+        .add-button__book {
+          grid-column-start: 2;
+          grid-column-start: 3;
+
+          p {
+            cursor: pointer;
+            color: white;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            background-color: #2BA0B0;
+          }
+        }
+      }
+    }
+  }
+
+  .welcome-home__page {
+
+    margin: auto;
+    margin-top: 0px;
+    text-align: center;
+
+    padding-top: 0px;
+    position: relative;
+
+    font-family: 'Bungee Shade', cursive;
+    font-weight: 800;
+    font-size: 24px;
+  }
+
+  .about-us {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+
+    .jd-apps {
+
+      h3 {
+        text-align: center;
+        font-family: 'Fredericka the Great', cursive;
+        font-weight: 500;
+        font-size: 40px;
+        background-color: #00AFB9;
+        color: white;
+      }
+
+      p {
+        font-family: Bitter, serif;
+        font-style: normal;
+        font-size: 16px;
+        text-align: justify;
+        padding: 18px;
+        padding-top: 30px;
+      }
+    }
+
+    .container-team {
+      margin: auto;
+      padding: 0px 10px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1em 1em;
+      box-shadow: none !important;
+
+      div {
+
+        h4 {
+          font-size: 20px;
+          text-align: center;
+          padding: 12px 10px 10px 10px;
+
+        }
+
+        h5 {
+          padding: 12px 10px 10px 10px;
+          font-size: 16px;
+          text-align: center;
+        }
+
+        p {
+          font-family: Quicksand, sans-serif;
+          font-style: normal;
+
+          text-align: center;
+          padding: 12px;
+        }
+
+        .social-media {
+          margin: center;
+          text-align: center;
+          box-shadow: none !important;
+
+          a {
+            text-decoration: none;
+
+            i {
+              cursor: pointer;
+              padding: 0px 0px;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
+  }
+
+  // Style Untuk Home Page
+  #mainContent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1em 1em;
+    border-radius: 20px;
+    margin: 0% 4%;
+    margin-bottom: 10%;
+
+    .container-search__results {
+      background-color: white;
+      padding: 12px;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      list-style: none;
+
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 0em 1em;
+
+      &:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        transition: all 0.8s ease, background-position 1ms;
+      }
+
+      .image-book {
+        margin: auto;
+
+        img {
+          margin: auto;
+          height: 170px;
+          object-fit: cover;
+          // border: 0.5px solid black;
+          border-radius: 4px;
+        }
+      }
+
+      .items-book {
+        padding-top: 18px;
+
+        p {
+
+          .p-authors {
+            color: #29bf12;
+          }
+
+          .p-publisher,
+          .p-pageCount {
+            color: crimson;
+          }
+
+          width: 200px;
+
+          position: relative;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        h2 {
+          font-family: 'Vesper Libre', serif;
+          font-weight: 500;
+          text-transform: capitalize;
+          font-size: 22px;
+
+          height: 40px;
+          width: 200px;
+
+          position: relative;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+
+          a {
+            color: black;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  // Heading tulisan Detail Page
+  .detail-page {
+    padding: 10px 0px;
+    font-family: 'Amiri', serif;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 400;
+    font-size: 22px;
+    padding: 10px 10px;
+    width: 100%;
+
+    background-color: #46eb9e;
+    color: black;
+    // border-radius: 15px;
+    // border: 1px solid #2EC4B6;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+  }
+
+  // Style Untuk Detail page
+  #detail {
+
+    grid-column-start: 1;
+    grid-column-end: 8;
+
+    background-color: #fdfdff;
+    border: 3px solid #2EC4B6;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+    .container-search__details {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1em;
+
+      padding: 15px;
+      border-radius: 8px;
+
+      .image-book__detail {
+        margin: 0px auto;
+
+        img {
+          border-radius: 10px;
+        }
+      }
+
+      .items-book__detail {
+
+        h2 {
+          font-weight: 600;
+          color: #ef233c;
+          font-size: 30px;
+          font-family: 'Forum', cursive;
+          // font-family: 'Yatra One', cursive;
+        }
+
+        h3 {
+          color: black;
+          font-weight: bold;
+        }
+
+        .deskripsi {
+          box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+          margin-right: 0%;
+
+          br {
+            display: none;
+          }
+
+          p {
+            font-weight: normal;
+            font-style: normal;
+            padding: 16px 16px;
+            text-align: justify;
+
+            color: black;
+            display: inline-block;
+          }
+        }
+
+        p {
+          padding: 4px
+        }
+      }
+
+      #btn-wishlist {
+        font-size: 18px;
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        background-color: #1A5ACE;
+        color: white;
+        border: 0;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #btn-proggres {
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        align-items: center;
+        appearance: none;
+        background-color: #FCFCFD;
+        border-radius: 4px;
+        border-width: 0;
+        box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+        #D6D6E7 0 -3px 0 inset;
+        box-sizing: border-box;
+        color: #36395A;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: "JetBrains Mono",
+        monospace;
+        height: 48px;
+        justify-content: center;
+        line-height: 1;
+        list-style: none;
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        text-align: left;
+        text-decoration: none;
+        transition: box-shadow .15s,
+        transform .15s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        will-change: box-shadow,
+        transform;
+        text-align: center;
+        margin: auto;
+        font-size: 14px;
+        width: 90%;
+
+        &:focus {
+          box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        }
+
+        &:hover {
+          box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          box-shadow: #D6D6E7 0 3px 7px inset;
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+
+  // Heading tulisan Wishlist Page
+  .wishlist-page {
+    padding: 10px 0px;
+    font-family: 'Amiri', serif;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 400;
+    font-size: 22px;
+    padding: 5px 15px;
+    width: 100%;
+    text-align: center;
+
+    background-color: #46eb9e;
+    color: black;
+    // border-radius: 15px;
+    // border: 1px solid #2EC4B6;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+
+  .wishlist-books__items {
+    grid-column-start: 1;
+    grid-column-end: 8;
+
+    background-color: #fdfdff;
+    border: 1px solid #2EC4B6;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+    .container-wishlist {
+      padding: 10px;
+
+      #items-wishlist {
+
+        .container-items__wishlist {
+          display: grid;
+          grid-template-columns: 8fr 1fr 1fr;
+
+          background-color: #f1f4f7;
+          padding: 16px 10px;
+          margin: 16px 2px;
+
+          div {
+            h4 {
+              a {
+                text-decoration: none;
+                color: #1A5ACE;
+              }
+            }
+
+            .items-wishlist__publisher {
+              color: black;
+            }
+          }
+
+          #btn-preview {
+            background-color: #ffee32;
+            border-radius: 100px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+            color: black;
+            cursor: pointer;
+            display: inline-block;
+            font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+
+            &:hover {
+              box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+              transform: scale(1.05) rotate(-1deg);
+            }
+          }
+
+          #btn-delete {
+            background-color: #ef233c;
+            border-radius: 100px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+            color: white;
+            cursor: pointer;
+            display: inline-block;
+            font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif;
+            padding: 7px 20px;
+            text-align: center;
+            text-decoration: none;
+            transition: all 250ms;
+            border: 0;
+            font-size: 16px;
+            user-select: none;
+            -webkit-user-select: none;
+            touch-action: manipulation;
+
+            &:hover {
+              box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+              transform: scale(1.05) rotate(-1deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Heading tulisan Progress Page
+  .progress-page {
+    padding: 10px 0px;
+    font-family: 'Amiri', serif;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 400;
+    font-size: 22px;
+    padding-left: 36px;
+    width: 100%;
+  }
+
+  #proggress-items {
+    grid-column-start: 1;
+    grid-column-end: 8;
+
+    .progress-books__items {
+      background-color: #f1f4f7;
+      padding: 16px 12px;
+      margin: 16px 2px;
+      box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+      .proggress-main {
+        padding: 10px 10px;
+
+        h4 {
+          color: #1A5ACE;
+          font-size: 23px;
+        }
+
+        p {
+          .style-text__halaman {
+            color: red;
+          }
+        }
+      }
+
+      .proggress-user {
+        padding: 10px 10px;
+
+        input {
+          width: 100px;
+          padding: 10px;
+          border: 0;
+          border-radius: 10px;
+          font-family: inherit;
+          font-size: inherit;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+          margin-bottom: 16px;
+        }
+
+        #btn-inputuser {
+          background-color: #13aa52;
+          border: 1px solid #13aa52;
+          border-radius: 4px;
+          box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+          box-sizing: border-box;
+          color: #fff;
+          cursor: pointer;
+          font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          outline: none;
+          outline: 0;
+          padding: 10px 25px;
+          text-align: center;
+          transform: translateY(0);
+          transition: transform 150ms, box-shadow 150ms;
+          user-select: none;
+          -webkit-user-select: none;
+          touch-action: manipulation;
+
+          &:hover {
+            box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+            transform: translateY(-2px);
+          }
+        }
+
+        p {
+          padding-top: 14px;
+        }
+
+      }
+    }
+  }
+
+
+
+
+
+  // Footer
+  footer {
+    height: 80px;
+    width: 100%;
+    background-color: #00AFB9;
+
+    p {
+      font-size: 14px;
+      color: white;
+      text-align: center;
+      line-height: 80px;
+    }
+  }
+
+}
+
+@media screen and (min-width: 685px) and (max-device-width: 700px) {
+  #mainContent {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em 1em;
+    border-radius: 20px;
+    margin: 0% 4%;
+    margin-bottom: 10%;
+
+    .container-search__results {
+
+      background-color: white;
+      padding: 12px;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      list-style: none;
+
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      grid-gap: 0em 1em;
+      width: 80%;
+
+      &:hover {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        transition: all 0.8s ease, background-position 1ms;
+      }
+
+      .image-book {
+        margin: auto;
+
+        img {
+          margin: auto;
+          height: 170px;
+          object-fit: cover;
+          // border: 0.5px solid black;
+          border-radius: 4px;
+        }
+      }
+
+      .items-book {
+        padding-top: 18px;
+
+        p {
+
+          .p-authors {
+            color: #29bf12;
+          }
+
+          .p-publisher,
+          .p-pageCount {
+            color: crimson;
+          }
+
+          width: 200px;
+
+          position: relative;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        h2 {
+          font-family: 'Vesper Libre', serif;
+          font-weight: 500;
+          text-transform: capitalize;
+          font-size: 22px;
+
+          height: 40px;
+          width: 200px;
+
+          position: relative;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+
+
+          a {
+            color: black;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+
+@media screen and (min-width: 701px) and (max-device-width: 1022px) {
+
+  // mengatur hero
+  .hero-container {
+    grid-template-rows: 400px;
+
+    .hero-element {
+      padding: 0px;
+      margin-top: 0px;
+
+      .hero-image {
+        padding: 10px;
+        top: 45px;
+        width: 300px;
+        height: 300px;
+        background-size: cover;
+        position: relative;
+        transition: all 2s;
+      }
+
+      .hero-title {
+        font-size: 36px;
+        margin-top: 60px;
+        margin-bottom: 20px;
+      }
+
+      .hero-tagline {
+        padding: 8px;
+        text-align: justify;
+        text-align: center;
+        font-family: 'Sanchez', serif;
+        font-size: 17px;
+      }
+
+
+    }
+  }
+
+  // Heading untuk home paga 
+  .welcome-home__page {
+
+    margin: auto;
+    margin-top: 0px;
+    text-align: center;
+
+    padding-top: 0px;
+
+    font-weight: 800;
+    font-size: 24px;
+  }
+
+
+  // Heading tulisan Detail Page
+  .detail-page {
+    padding: 10px 0px;
+    font-family: 'Amiri', serif;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 400;
+    font-size: 22px;
+    padding: 12px 12px;
+    width: 80%;
+    text-align: center;
+
+    background-color: #46eb9e;
+    color: black;
+    // border-radius: 15px;
+    // border: 1px solid #2EC4B6;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+  }
+
+  // Style Untuk Detail page
+  #detail {
+
+    grid-column-start: 1;
+    grid-column-end: 8;
+
+    background-color: #fdfdff;
+    border: 3px solid #2EC4B6;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+    .container-search__details {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1em;
+
+      padding: 15px;
+      border-radius: 8px;
+
+      .image-book__detail {
+        margin: 0px auto;
+
+        img {
+          border-radius: 10px;
+        }
+      }
+
+      .items-book__detail {
+
+        h2 {
+          font-weight: 600;
+          color: #ef233c;
+          font-size: 30px;
+          font-family: 'Forum', cursive;
+          // font-family: 'Yatra One', cursive;
+        }
+
+        h3 {
+          color: black;
+          font-weight: bold;
+        }
+
+        .deskripsi {
+          box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+          margin-right: 0%;
+
+          br {
+            display: none;
+          }
+
+          p {
+            font-weight: normal;
+            font-style: normal;
+            padding: 16px 16px;
+            text-align: justify;
+
+            color: black;
+            display: inline-block;
+          }
+        }
+
+        p {
+          padding: 4px
+        }
+      }
+
+      #btn-wishlist {
+        font-size: 18px;
+        position: fixed;
+        bottom: 16px;
+        right: 16px;
+        background-color: #1A5ACE;
+        color: white;
+        border: 0;
+        border-radius: 50%;
+        width: 55px;
+        height: 55px;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #btn-proggres {
+        a {
+          text-decoration: none;
+          color: black;
+        }
+
+        align-items: center;
+        appearance: none;
+        background-color: #FCFCFD;
+        border-radius: 4px;
+        border-width: 0;
+        box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+        rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+        #D6D6E7 0 -3px 0 inset;
+        box-sizing: border-box;
+        color: #36395A;
+        cursor: pointer;
+        display: inline-flex;
+        font-family: "JetBrains Mono",
+        monospace;
+        height: 48px;
+        justify-content: center;
+        line-height: 1;
+        list-style: none;
+        overflow: hidden;
+        padding-left: 16px;
+        padding-right: 16px;
+        position: relative;
+        text-align: left;
+        text-decoration: none;
+        transition: box-shadow .15s,
+        transform .15s;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        white-space: nowrap;
+        will-change: box-shadow,
+        transform;
+        text-align: center;
+        margin: auto;
+        font-size: 14px;
+        width: 90%;
+
+        &:focus {
+          box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+        }
+
+        &:hover {
+          box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+          transform: translateY(-2px);
+        }
+
+        &:active {
+          box-shadow: #D6D6E7 0 3px 7px inset;
+          transform: translateY(2px);
+        }
+      }
+    }
+  }
+
+  // Heading tulisan Wishlist Page
+  .wishlist-page {
+    padding: 10px 0px;
+    font-family: 'Amiri', serif;
+    font-family: 'Cinzel Decorative', cursive;
+    font-weight: 400;
+    font-size: 22px;
+    padding: 5px 15px;
+    width: 100%;
+    text-align: center;
+
+    background-color: #46eb9e;
+    color: black;
+    // border-radius: 15px;
+    // border: 1px solid #2EC4B6;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+
+  // About 
+  .about-us {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgb(209, 213, 219) 0px 0px 0px 1px inset;
+
+    .container-team {
+      margin: auto;
+      padding: 0px 10px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      transition: all ease-in-out 1s;
+
+    }
+  }
+
+}
+
+// mengatur responsive
+@media screen and (min-width: 500px) and (max-device-width: 700px) {
+
+  // Hero 
+  .hero-container {
+    .hero-element {
+      .hero-image {
+        transition: all 2s;
+        padding: 10px;
+        top: 25px;
+        width: 250px;
+        height: 250px;
+      }
+    }
+  }
+
+  // Search
+  .search-books {
+    top: -100px; // agar container naik
+  }
+
+}
+
+// mengatur responsive
+@media screen and (min-width: 700px) {
+
+  // App bar navigation
+  .app-bar {
+    grid-template-columns: 1fr auto;
+    padding: 8px 32px;
+    text-align: center;
+
+    .app-bar__brand {
+      text-align: center;
+
+      h1 {
+        font-size: 2em;
+      }
+    }
+
+    .app-bar__menu {
+      display: none;
+    }
+
+    .app-bar__navigation {
+      position: static;
+      width: 100%;
+      box-shadow: none;
+      border-radius: none;
+
+      ul {
+        li {
+          display: inline-block;
+
+          a {
+            display: inline-block;
+            width: 120px;
+            text-align: center;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+
+}
