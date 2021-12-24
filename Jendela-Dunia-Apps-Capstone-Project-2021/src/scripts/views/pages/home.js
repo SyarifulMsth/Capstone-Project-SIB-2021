@@ -1,5 +1,4 @@
 import searchElement from '../../utils/searchData';
-
 const Home = {
   async render() {
     return `
@@ -14,3 +13,4 @@ const Home = {
 };
 
 export default Home;
+

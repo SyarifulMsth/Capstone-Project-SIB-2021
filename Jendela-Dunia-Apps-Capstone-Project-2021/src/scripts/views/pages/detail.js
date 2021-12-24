@@ -1,5 +1,6 @@
 import UrlParser from '../../routes/url-parser';
 import detailBooks from '../../utils/detailBooks';
+import addWishlist from '../../utils/add-wishlist';
 
 const Detail = {
   async render() {
@@ -12,8 +13,20 @@ const Detail = {
   // eslint-disable-next-line no-empty-function
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
+    // eslint-disable-next-line no-unused-vars
     const books = await detailBooks(url.id);
-    console.log(books);
+    this._addToWishlist(books);
+  },
+
+  _addToWishlist(books) {
+    const { volumeInfo } = books;
+    addWishlist.init({
+      books: {
+        id: books.id,
+        title: volumeInfo.title,
+        publisher: volumeInfo.publisher,
+      },
+    });
   },
 };
 

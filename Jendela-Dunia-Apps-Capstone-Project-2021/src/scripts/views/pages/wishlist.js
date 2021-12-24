@@ -2,6 +2,11 @@ const Wishlist = {
   async render() {
     return `
       <h2>Wishlist Page</h2>
+      <div class="container-wishlist">
+        <div id="itemswishlist">
+        
+        </div>    
+      </div>
     `;
   },
 
