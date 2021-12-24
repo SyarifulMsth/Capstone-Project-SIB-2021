@@ -14,6 +14,7 @@ const Proggres = {
     const books = await database.proggresDatabase.getALlBook();
     books.forEach((book) => {
       proggresTamplte.proggresTempalte(book);
+      proggresTamplte.sisaPage(book);
     });
   },
 
